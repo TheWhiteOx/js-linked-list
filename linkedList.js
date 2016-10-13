@@ -18,7 +18,19 @@ function linkedListGenerator(){
 	}
 
 	linkedList.add = function(value) {
-		linkedList.
+		let newTail = _createNode(value);
+
+        if (!linkedList.head) {
+            linkedList.head = newTail;
+        }
+
+        if (linkedList.tail) {
+            linkedList.tail.next = newTail;
+        }
+        
+        linkedList.tail = newTail;
+
+        return newTail
 	}
 
 	linkedList.get = function(n) {
@@ -30,6 +42,13 @@ function linkedListGenerator(){
 
 	linkedList.insert = function(value, n) {
 		
+	}
+
+	function _createNode(value) {
+		return {
+			value: value,
+			next: null
+		}
 	}
 
 	return linkedList;
