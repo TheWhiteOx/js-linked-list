@@ -241,12 +241,18 @@ describe('Linked List Generator', function() {
 
         // test new node at position 2
         expect(urlList.get(2).value).to.equal('icann.org');
+        console.log('**getHeadBefore**', urlList.getHead());
+        console.log('**getTailBefore**', urlList.getTail());
 
         // remove last node
         urlList.remove(2);
+        console.log('**getHeadAfter**', urlList.getHead());
+        console.log('**getTailAfter**', urlList.getTail());
+
 
         // retrieve new node at position 2
         expect(urlList.get(2)).to.be.false;
+        console.log('**getting***', urlList.get(2))
         expect(urlList.getHead().value).to.equal('news.ycombinator.com');
         expect(urlList.getTail().value).to.equal('mozilla.org');
 
