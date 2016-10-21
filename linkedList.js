@@ -28,7 +28,6 @@ function linkedListGenerator(){
     }
 
     tail = newTail;
-
     return newTail
 	}
 
@@ -44,7 +43,6 @@ function linkedListGenerator(){
 	}
 
 	const remove = function(n) {
-
     let nodeToRemove = head || false;
     let nodeAfter = nodeToRemove.next;
     let nodeBefore = head
@@ -63,7 +61,6 @@ function linkedListGenerator(){
     }
 
     nodeBefore.next = nodeToRemove.next;
-
     return nodeToRemove
 	}
 
